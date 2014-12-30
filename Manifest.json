@@ -1,0 +1,34 @@
+{
+  "info" : 
+  {
+    "name" : "qxrad",
+
+    "summary" : "RAD for AstraNOS",
+    "description" : "This is the Rapid Application Development environment for AstraNOS",
+    
+    "homepage" : "https://www.AstraNOS.org/",
+
+    "license" : "SomeLicense",
+    "authors" : 
+    [
+      {
+        "name" : "Varol Okan",
+        "email" : "AstraNOS@AstraNOS.org"
+      }
+    ],
+
+    "version" : "master",
+    "qooxdoo-versions": ["4.0.1"]
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "qxrad",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "application"
+  }
+}
+
