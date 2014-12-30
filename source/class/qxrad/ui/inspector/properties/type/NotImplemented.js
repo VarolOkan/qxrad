@@ -52,11 +52,11 @@ qx.Class.define("qxrad.ui.inspector.properties.type.NotImplemented",
       
       return control;
     },
-    getQgbProperty : function()
+    getQxradProperty : function()
     {
       return null;
     },
-    setQgbProperty : function(value)
+    setQxradProperty : function(value)
     {
      return false;
     },

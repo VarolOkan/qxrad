@@ -50,12 +50,12 @@ qx.Class.define("qxrad.ui.inspector.properties.type.Boolean",
        	return;
        }
        var value = e.getTarget().getValue();
-       this.setQgbProperty(value);
+       this.setQxradProperty(value);
        this.setOldValue(value);
     },
     _updatingValue : function (value) {
 		if (value === undefined) {
-			value = this.getQgbProperty();	    		
+			value = this.getQxradProperty();	    		
 		}
 		
 		if (value != null) {

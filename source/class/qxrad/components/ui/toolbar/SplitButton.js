@@ -68,7 +68,7 @@ qx.Class.define("qxrad.components.ui.toolbar.SplitButton",
       {
         for (var i=0, l=dropDataType.length; i<l; i++)
         {
-          if (dropDataType[i] == e.getRelatedTarget().getQgbClassname() || dropDataType[i] == "All") result = true;
+          if (dropDataType[i] == e.getRelatedTarget().getQxradClassname() || dropDataType[i] == "All") result = true;
         }
       }
 
@@ -81,7 +81,7 @@ qx.Class.define("qxrad.components.ui.toolbar.SplitButton",
     },
     __drop : function(e)
     {
-      var type = e.getRelatedTarget().getQgbClassname();	
+      var type = e.getRelatedTarget().getQxradClassname();	
       var data = e.getData(type);	
       var classname = data;
       var componentClass = eval(classname);

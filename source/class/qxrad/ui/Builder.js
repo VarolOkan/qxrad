@@ -22,9 +22,7 @@ qx.Class.define("qxrad.ui.Builder",
     this.setIsDroppable(true);
     this.setDropDataType([ "All" ]);
 
-    this.setQgbID("qxrad_" + this.toHashCode());
-
-
+    this.setQxradID("qxrad_" + this.toHashCode());
   },
 
   events :

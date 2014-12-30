@@ -27,10 +27,10 @@ qx.Mixin.define("qxrad.components.MProperties",
 		this.__selectedComponent();
 	},this,true); 
 
-	//this.setQgbID("qxrad_" + this.toHashCode());
+	//this.setQxradID("qxrad_" + this.toHashCode());
 	var tArr = this.classname.split(".");
 	var name = tArr[tArr.length-1];
-	this.setQgbID( name + this.toHashCode());
+	this.setQxradID( name + this.toHashCode());
 	
 	//this.setUserDefinedProperties("QX_GUI_BUILDER","qxradID","qxrad_" + this.toHashCode());			
 	

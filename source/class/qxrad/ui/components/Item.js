@@ -17,8 +17,8 @@ qx.Class.define("qxrad.ui.components.Item",
   {
     this.base(arguments,name);
 
-	this.setQgbClassname(classname);
-	this.setQgbName(name);
+	this.setQxradClassname(classname);
+	this.setQxradName(name);
 	this.set({icon : icon});
 	this.getChildControl("label").setVisibility("excluded");
 	this.setToolTip(new qx.ui.tooltip.ToolTip(name));

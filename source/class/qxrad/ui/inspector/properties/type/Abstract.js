@@ -95,7 +95,7 @@ qx.Class.define("qxrad.ui.inspector.properties.type.Abstract",
           type.setEnabled(true);
           value = this.getOldValue();
         }
-        this.setQgbProperty(value);
+        this.setQxradProperty(value);
     },  	
     _onStandardPropertyChange : function(e)
     {
@@ -103,10 +103,10 @@ qx.Class.define("qxrad.ui.inspector.properties.type.Abstract",
        	return;
        }
        var value = e.getTarget().getValue();
-       this.setQgbProperty(value);
+       this.setQxradProperty(value);
        this.setOldValue(value);
     },  	
-    getQgbProperty : function()
+    getQxradProperty : function()
     {
       var component = this._component;
       if (component == null) {
@@ -116,7 +116,7 @@ qx.Class.define("qxrad.ui.inspector.properties.type.Abstract",
       var getter = "get" + qx.lang.String.firstUp(name);
       return component[getter]();
     },
-    setQgbProperty : function(value)
+    setQxradProperty : function(value)
     {
       var component = this._component;
       if (component == null) {
@@ -153,7 +153,7 @@ qx.Class.define("qxrad.ui.inspector.properties.type.Abstract",
     },
     _updatingValue : function (value) {
 		if (value === undefined) {
-			value = this.getQgbProperty();	    		
+			value = this.getQxradProperty();	    		
 		}
 		
 		if (value != null) {

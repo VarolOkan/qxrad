@@ -302,7 +302,7 @@ qx.Class.define("qxrad.Application",
 			var description = this.getChild("description");
 			var tabQgbId = description.__tabQgbId;
 			var component = tabQgbId[object.getLabel()].component;
-			var qxradID = component.getQgbID();
+			var qxradID = component.getQxradID();
 			var classname = component.constructor.superclass.classname;
 			this.__sourceCode.push("\n// Create " + qxradID);			
 			this.__sourceCode.push("var " + qxradID + " = new " + classname + "();");
@@ -335,13 +335,13 @@ qx.Class.define("qxrad.Application",
 
 		// check if the component is a qx.ui.tree.TreeFolder
 		if (component.classname == "qxrad.components.ui.tree.TreeFolder") {
-			this.debug("qx.ui.tree.TreeFolder : " + component.getQgbID());
+			this.debug("qx.ui.tree.TreeFolder : " + component.getQxradID());
 			var tree = component.getTree();
-			var rootQgbID = tree.getRoot().getQgbID();
+			var rootQgbID = tree.getRoot().getQxradID();
 			// check is the root folder
-			if (component.getQgbID() == rootQgbID) {
+			if (component.getQxradID() == rootQgbID) {
 				this.__sourceCode.push("\n// set the root tree");
-				this.__sourceCode.push(tree.getQgbID() + ".setRoot(" + rootQgbID + ");");
+				this.__sourceCode.push(tree.getQxradID() + ".setRoot(" + rootQgbID + ");");
 				noAdding = true;
 			}
 		}

@@ -45,7 +45,7 @@ qx.Class.define("qxrad.ui.inspector.properties.type.String",
       return control;
     },
     
-    setQgbProperty : function(value)
+    setQxradProperty : function(value)
     {
       var component = this._component;
       if (component == null) {

@@ -50,7 +50,7 @@ qx.Class.define("qxrad.ui.Description",
 
 	eventBus.subscribe("selectedComponent", function (e) {
 		var component = e.getData().component;
-		var treeItem =  this.__tabQgbId[component.getQgbID()].item;
+		var treeItem =  this.__tabQgbId[component.getQxradID()].item;
 		this.__disabledEventChangeSelection = true;
 		this.__tree.select(treeItem);
 		this.__disabledEventChangeSelection = false;
@@ -83,16 +83,16 @@ qx.Class.define("qxrad.ui.Description",
       
       var treeParent = this.__tree.getRoot();
       
-      var qxradIdParent = this.__tabQgbId[parent.getQgbID()] || null;
+      var qxradIdParent = this.__tabQgbId[parent.getQxradID()] || null;
       if (qxradIdParent != null) {
-      	treeParent = this.__tabQgbId[parent.getQgbID()].item; 
+      	treeParent = this.__tabQgbId[parent.getQxradID()].item; 
       }
 
-      var treeFolder = new qx.ui.tree.TreeFolder(component.getQgbID());
+      var treeFolder = new qx.ui.tree.TreeFolder(component.getQxradID());
       var icon = qxrad.Components.getIconComponent(component.classname);
       treeFolder.setIcon(icon);
       treeFolder.getChildControl("label").set({textColor : "white"});
-      this.__tabQgbId[component.getQgbID()] = { item : treeFolder, component : component};
+      this.__tabQgbId[component.getQxradID()] = { item : treeFolder, component : component};
       treeParent.add(treeFolder);      	
 	},
 	__onChangeQgbID : function (e) {
@@ -101,7 +101,7 @@ qx.Class.define("qxrad.ui.Description",
 		var treeFolder = this.__tabQgbId[oldQgbID].item;
 		var component = this.__tabQgbId[oldQgbID].component;
 		treeFolder.setLabel(qxradID);
-		this.__tabQgbId[component.getQgbID()] = { item : treeFolder, component : component};
+		this.__tabQgbId[component.getQxradID()] = { item : treeFolder, component : component};
 		delete this.__tabQgbId[oldQgbID];
 	}
 

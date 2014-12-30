@@ -73,13 +73,13 @@ qx.Mixin.define("qxrad.core.MDragDrop",
     __dragStart : function(e)
     {
       e.addAction("copy");
-      e.addType(this.getQgbClassname());
+      e.addType(this.getQxradClassname());
     },
 
     __dropRequest : function(e)
     {
       var type = e.getCurrentType();
-      e.addData(type, this.getQgbClassname());
+      e.addData(type, this.getQxradClassname());
     },
 
     __dragOver : function(e)
@@ -92,7 +92,7 @@ qx.Mixin.define("qxrad.core.MDragDrop",
       {
         for (var i=0, l=dropDataType.length; i<l; i++)
         {
-          if (dropDataType[i] == e.getRelatedTarget().getQgbClassname() || dropDataType[i] == "All") result = true;
+          if (dropDataType[i] == e.getRelatedTarget().getQxradClassname() || dropDataType[i] == "All") result = true;
         }
       }
 
@@ -103,7 +103,7 @@ qx.Mixin.define("qxrad.core.MDragDrop",
     {
       var left = e.getDocumentLeft() - this.getContentLocation().left;
       var top = e.getDocumentTop() - this.getContentLocation().top;
-      var type = e.getRelatedTarget().getQgbClassname();
+      var type = e.getRelatedTarget().getQxradClassname();
       var data = e.getData(type);
 
       var classname = data;

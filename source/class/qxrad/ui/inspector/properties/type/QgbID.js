@@ -23,14 +23,14 @@ qx.Class.define("qxrad.ui.inspector.properties.type.QgbID",
 
   members :
   {
-    setQgbProperty : function(value)
+    setQxradProperty : function(value)
     {
       var component = this._component;
       if (component == null) {
       	return false;
       }      
       var name = this.getName();
-	  var oldValue = this.getQgbProperty();
+	  var oldValue = this.getQxradProperty();
 	  
       var setter = "set" + qx.lang.String.firstUp(name);
       component[setter](value);

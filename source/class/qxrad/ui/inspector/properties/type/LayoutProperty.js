@@ -23,7 +23,7 @@ qx.Class.define("qxrad.ui.inspector.properties.type.LayoutProperty",
 
   members :
   {
-    getQgbProperty : function()
+    getQxradProperty : function()
     {
       var component = this._component;
       if (component == null) {
@@ -32,7 +32,7 @@ qx.Class.define("qxrad.ui.inspector.properties.type.LayoutProperty",
       var name = this.getName();
       return component.getLayoutProperties()[name] || null;
     },
-    setQgbProperty : function(value)
+    setQxradProperty : function(value)
     {
       var component = this._component;
       if (component == null) {

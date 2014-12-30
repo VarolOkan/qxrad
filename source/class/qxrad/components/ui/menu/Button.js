@@ -56,17 +56,17 @@ qx.Class.define("qxrad.components.ui.menu.Button",
       {
         for (var i=0, l=dropDataType.length; i<l; i++)
         {
-          if (dropDataType[i] == e.getRelatedTarget().getQgbClassname() || dropDataType[i] == "All") result = true;
+          if (dropDataType[i] == e.getRelatedTarget().getQxradClassname() || dropDataType[i] == "All") result = true;
         }
       }
 	  
 	  if (this.getMenu()) {
 	  	this.getMenu().open();
-	  	if (e.getRelatedTarget().getQgbClassname() == "qxrad.components.ui.menu.Menu")
+	  	if (e.getRelatedTarget().getQxradClassname() == "qxrad.components.ui.menu.Menu")
 	  		result = false;
 	  }
 	  else {
-	  	if (e.getRelatedTarget().getQgbClassname() != "qxrad.components.ui.menu.Menu")
+	  	if (e.getRelatedTarget().getQxradClassname() != "qxrad.components.ui.menu.Menu")
 	  		result = false;	  
 	  }
 	  
@@ -78,7 +78,7 @@ qx.Class.define("qxrad.components.ui.menu.Button",
     },  	
     __drop : function(e)
     {
-      var type = e.getRelatedTarget().getQgbClassname();	
+      var type = e.getRelatedTarget().getQxradClassname();	
       var data = e.getData(type);	
       var classname = data;
       var componentClass = eval(classname);

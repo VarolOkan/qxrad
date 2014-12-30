@@ -39,7 +39,7 @@ qx.Class.define("qxrad.components.ui.tree.Tree",
 			component : root
 		});
 		qx.event.message.Bus.dispatch(msg);
-		//this.setUserDefinedProperties("TREE","root",root.getQgbID());
+		//this.setUserDefinedProperties("TREE","root",root.getQxradID());
 		root.setUserDefinedProperties("ABSTRACTTREEITEM","label","\"root\"");	
 	});	
   },
